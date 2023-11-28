@@ -20,7 +20,7 @@ def get_url_from_user():
 def get_website_html_code(website_url):
     request_response = requests.get(website_url)
     url_content = request_response.text
-    soup = BeautifulSoup(url_content, "lxml")
+    soup = BeautifulSoup(url_content, 'html.parser')
 
     return soup
 
